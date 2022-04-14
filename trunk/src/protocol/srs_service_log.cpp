@@ -29,6 +29,7 @@ SrsThreadContext::SrsThreadContext()
 
 SrsThreadContext::~SrsThreadContext()
 {
+
 }
 
 SrsContextId SrsThreadContext::generate_id()

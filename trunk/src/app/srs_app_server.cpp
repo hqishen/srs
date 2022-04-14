@@ -761,7 +761,7 @@ srs_error_t SrsServer::listen()
         return srs_error_wrap(err, "https api listen");
     }
     
-    if ((err = listen_http_stream()) != srs_success) {
+    if ((err = listen_http_stream()) != srs_success) { //创建一个http 的服务器，ip：0.0.0.0 port:8080
         return srs_error_wrap(err, "http stream listen");
     }
 
@@ -1192,7 +1192,7 @@ srs_error_t SrsServer::listen_http_api()
     
     close_listeners(SrsListenerHttpApi);
     if (_srs_config->get_http_api_enabled()) {
-        SrsListener* listener = new SrsBufferListener(this, SrsListenerHttpApi);
+        SrsListener* listener = new SrsBufferListener(this, SrsListenerHttpApi); //每有一个连接进来，会new一个对象
         listeners.push_back(listener);
         
         std::string ep = _srs_config->get_http_api_listen();

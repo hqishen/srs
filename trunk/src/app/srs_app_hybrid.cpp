@@ -165,7 +165,7 @@ srs_error_t SrsServerAdapter::run(SrsWaitGroup* wg)
         return srs_error_wrap(err, "register signal");
     }
 
-    if ((err = srs->http_handle()) != srs_success) {
+    if ((err = srs->http_handle()) != srs_success) { //注册http 调用的api接口
         return srs_error_wrap(err, "http handle");
     }
 

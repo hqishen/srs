@@ -194,7 +194,9 @@ srs_error_t do_main(int argc, char** argv)
         srs_trace("tcmalloc: set release-rate %.2f=>%.2f", otrr, trr);
     }
 #endif
-    
+
+    srs_warn("running run_directly_or_daemon1...");
+    //进入idle状态
     if ((err = run_directly_or_daemon()) != srs_success) {
         return srs_error_wrap(err, "run");
     }
@@ -209,7 +211,8 @@ int main(int argc, char** argv)
     if (err != srs_success) {
         srs_error("Failed, %s", srs_error_desc(err).c_str());
     }
-    
+
+    srs_warn("running srs server...");
     int ret = srs_error_code(err);
     srs_freep(err);
     return ret;
