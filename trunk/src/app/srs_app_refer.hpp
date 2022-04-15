@@ -13,6 +13,10 @@
 
 class SrsConfDirective;
 
+/*
+ * RTMP 防盗链
+ */
+
 class SrsRefer
 {
 public:

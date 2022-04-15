@@ -16,6 +16,9 @@
 class SrsConfDirective;
 
 // The security apply on vhost.
+/*
+ * rtmp请求安全检测
+ */
 class SrsSecurity
 {
 public:

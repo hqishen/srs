@@ -14,6 +14,9 @@
 
 // Represent a fragment, such as HLS segment, DVR segment or DASH segment.
 // It's a media file, for example FLV or MP4, with duration.
+/*
+ * 生成mp4/flv片段
+ */
 class SrsFragment
 {
 private:

@@ -97,6 +97,9 @@ public:
 };
 
 // The edge used to ingest stream from origin.
+/*
+ * 从源站中获取流
+ */
 class SrsEdgeIngester : public ISrsCoroutineHandler
 {
 private:
@@ -125,6 +128,9 @@ private:
 };
 
 // The edge used to forward stream to origin.
+/*
+ * 转发流到源站
+ */
 class SrsEdgeForwarder : public ISrsCoroutineHandler
 {
 private:
@@ -160,6 +166,9 @@ public:
 };
 
 // The play edge control service.
+/*
+ * 边缘拉流
+ */
 class SrsPlayEdge
 {
 private:
@@ -184,6 +193,9 @@ public:
 };
 
 // The publish edge control service.
+/*
+ * 边缘推流代理
+ */
 class SrsPublishEdge
 {
 private:

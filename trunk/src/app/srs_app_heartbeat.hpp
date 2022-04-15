@@ -10,6 +10,9 @@
 #include <srs_core.hpp>
 
 // The http heartbeat to api-server to notice api that the information of SRS.
+/*
+ * 服务器心跳连接
+ */
 class SrsHttpHeartbeat
 {
 public:

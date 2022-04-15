@@ -45,7 +45,7 @@ private:
 
 // The http static server instance,
 // serve http static file and flv/mp4 vod stream.
-class SrsHttpStaticServer : public ISrsReloadHandler
+class SrsHttpStaticServer : public ISrsReloadHandler // http 静态文件服务器
 {
 private:
     SrsServer* server;

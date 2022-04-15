@@ -37,6 +37,9 @@ class SrsTsContext;
 //
 // 3.3.2.  EXTINF
 // The EXTINF tag specifies the duration of a media segment.
+/*
+ * 生成ts切片
+ */
 class SrsHlsSegment : public SrsFragment
 {
 public:
@@ -103,6 +106,9 @@ public:
 //
 // That is, user must use HlsCache, which will control the methods of muxer,
 // and provides HLS mechenisms.
+/*
+ * 合成HLS流（m3u8,ts文件)
+ */
 class SrsHlsMuxer
 {
 private:
@@ -218,6 +224,9 @@ private:
 //   when timestamp convert to flv tbn, it will loose precise,
 //   so we must gather audio frame together, and recalc the timestamp @see SrsTsAacJitter,
 //   we use a aac jitter to correct the audio pts.
+/*
+ * hls 生成控制器
+ */
 class SrsHlsController
 {
 private:
@@ -259,6 +268,10 @@ private:
 
 // Transmux RTMP stream to HLS(m3u8 and ts).
 // TODO: FIXME: add utest for hls.
+
+/*
+ * 处理hls （m3u8,ts）文件
+ */
 class SrsHls
 {
 private:

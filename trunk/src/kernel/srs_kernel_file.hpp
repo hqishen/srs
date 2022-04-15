@@ -23,6 +23,9 @@ class SrsFileReader;
 /**
  * file writer, to write to file.
  */
+ /*
+  * srs 写文件
+  */
 class SrsFileWriter : public ISrsWriteSeeker
 {
 private:

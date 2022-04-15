@@ -58,7 +58,7 @@ enum SrsListenerType
 };
 
 // A common tcp listener, for RTMP/HTTP server.
-class SrsListener
+class SrsListener // 连接监听器，所有的连接都是通过这个监听其进行连接的
 {
 protected:
     SrsListenerType type;
@@ -75,7 +75,7 @@ public:
 };
 
 // A buffered TCP listener.
-class SrsBufferListener : public SrsListener, public ISrsTcpHandler
+class SrsBufferListener : public SrsListener, public ISrsTcpHandler // rtmp流监听器
 {
 private:
     SrsTcpListener* listener;
@@ -90,7 +90,7 @@ public:
 };
 
 // A TCP listener, for flv stream server.
-class SrsHttpFlvListener : public SrsListener, public ISrsTcpHandler
+class SrsHttpFlvListener : public SrsListener, public ISrsTcpHandler //http-flv 流监听器
 {
 private:
     SrsTcpListener* listener;
@@ -106,7 +106,7 @@ public:
 };
 
 // A UDP listener, for udp server.
-class SrsUdpStreamListener : public SrsListener
+class SrsUdpStreamListener : public SrsListener //udp流监听器
 {
 protected:
     SrsUdpListener* listener;
@@ -128,6 +128,9 @@ public:
 
 // Convert signal to io,
 // @see: st-1.9/docs/notes.html
+/*
+ * 信号管理器，接收外部信号
+ */
 class SrsSignalManager : public ISrsCoroutineHandler
 {
 private:
@@ -192,7 +195,7 @@ public:
 
 // TODO: FIXME: Rename to SrsLiveServer.
 // SRS RTMP server, initialize and listen, start connection service thread, destroy client.
-class SrsServer : public ISrsReloadHandler, public ISrsLiveSourceHandler
+class SrsServer : public ISrsReloadHandler, public ISrsLiveSourceHandler // SRS 服务类
     , public ISrsResourceManager, public ISrsCoroutineHandler
     , public ISrsHourGlass
 {

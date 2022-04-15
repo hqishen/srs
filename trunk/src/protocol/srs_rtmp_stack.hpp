@@ -132,6 +132,9 @@ protected:
 // The protocol provides the rtmp-message-protocol services,
 // To recv RTMP message from RTMP chunk stream,
 // and to send out RTMP message over RTMP chunk stream.
+/*
+ * Rtmp 协议
+ */
 class SrsProtocol
 {
 private:
@@ -517,7 +520,10 @@ struct SrsServerInfo
     SrsServerInfo();
 };
 
-// implements the client role protocol.
+// implements the client role protocol
+/*
+ * rtmp 客户端协议
+ */
 class SrsRtmpClient
 {
 private:

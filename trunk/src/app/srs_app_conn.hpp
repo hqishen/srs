@@ -147,7 +147,7 @@ public:
 // The basic connection of SRS, for TCP based protocols,
 // all connections accept from listener must extends from this base class,
 // server will add the connection to manager, and delete it when remove.
-class SrsTcpConnection : public ISrsProtocolReadWriter
+class SrsTcpConnection : public ISrsProtocolReadWriter //TCP连接器
 {
 private:
     // The underlayer st fd handler.

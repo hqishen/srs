@@ -373,6 +373,9 @@ public:
 // ServeMux also takes care of sanitizing the URL request path,
 // redirecting any request containing . or .. elements to an
 // equivalent .- and ..-free URL.
+/***********
+ * 处理http restful api
+ */
 class SrsHttpServeMux : public ISrsHttpServeMux
 {
 private:

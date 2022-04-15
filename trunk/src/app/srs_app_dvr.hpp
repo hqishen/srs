@@ -33,6 +33,9 @@ class SrsFormat;
 #include <srs_app_async_call.hpp>
 
 // The segmenter for DVR, to write a segment file in flv/mp4.
+/*
+ * 用flv/mp4片段
+ */
 class SrsDvrSegmenter : public ISrsReloadHandler
 {
 protected:
@@ -92,6 +95,9 @@ public:
 };
 
 // The FLV segmenter to use FLV encoder to write file.
+/*
+ * 用flv格式写文件
+ */
 class SrsDvrFlvSegmenter : public SrsDvrSegmenter
 {
 private:
@@ -120,6 +126,9 @@ protected:
 };
 
 // The MP4 segmenter to use MP4 encoder to write file.
+/*
+ * 用mp4格式写文件
+ */
 class SrsDvrMp4Segmenter : public SrsDvrSegmenter
 {
 private:
@@ -154,6 +163,9 @@ public:
 };
 
 // The DVR plan, when and how to reap segment.
+/*
+ * 管理怎样或什么时候生成录像文件
+ */
 class SrsDvrPlan : public ISrsReloadHandler
 {
 public:
@@ -217,6 +229,9 @@ public:
 };
 
 // DVR(Digital Video Recorder) to record RTMP stream to flv/mp4 file.
+/*
+ * rtmp 流生成flv/mp4录制文件
+ */
 class SrsDvr : public ISrsReloadHandler
 {
 private:

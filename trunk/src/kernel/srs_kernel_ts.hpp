@@ -1282,6 +1282,9 @@ private:
 
 // TS messages cache, to group frames to TS message,
 // for example, we may write multiple AAC RAW frames to a TS message.
+/*
+ * 将影视片流生成ts流缓冲
+ */
 class SrsTsMessageCache
 {
 public:

@@ -81,7 +81,10 @@ public:
 //   for the flash client directly close when got report packet.
 // 3. for linux client, it will send the publish data then send a stop publish,
 //   for the linux client donot know when to stop the publish.
-//   when server got publishing and stop publish, stop publish.
+//   when server got publishing and stop publish, stop publish
+/*
+ * rtmp 宽带检测.
+ */
 class SrsBandwidth
 {
 private:

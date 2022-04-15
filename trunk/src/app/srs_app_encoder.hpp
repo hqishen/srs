@@ -21,6 +21,9 @@ class SrsFFMPEG;
 
 // The encoder for a stream, may use multiple
 // ffmpegs to transcode the specified stream.
+/*
+ * 流编码器，ffmpeg对流进行处理
+ */
 class SrsEncoder : public ISrsCoroutineHandler
 {
 private:

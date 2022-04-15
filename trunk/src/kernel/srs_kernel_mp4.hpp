@@ -2013,6 +2013,9 @@ private:
 };
 
 // The MP4 muxer.
+/*
+ * mp4 编码器
+ */
 class SrsMp4Encoder
 {
 private:

@@ -26,6 +26,9 @@ class SrsKbps;
 class SrsSimpleRtmpClient;
 
 // Forward the stream to other servers.
+/*
+ * 转发流到其他rtmp流服务器
+ */
 class SrsForwarder : public ISrsCoroutineHandler
 {
 private:

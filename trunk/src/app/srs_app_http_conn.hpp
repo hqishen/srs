@@ -58,6 +58,9 @@ public:
 };
 
 // The http connection which request the static or stream content.
+/*
+ * http 流连接
+ */
 class SrsHttpConn : public ISrsStartableConneciton, public ISrsCoroutineHandler
     , public ISrsExpire
 {
@@ -176,7 +179,7 @@ public:
 };
 
 // The http server, use http stream or static server to serve requests.
-class SrsHttpServer : public ISrsHttpServeMux
+class SrsHttpServer : public ISrsHttpServeMux //http 服务
 {
 private:
     SrsServer* server;

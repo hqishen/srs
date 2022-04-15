@@ -101,6 +101,9 @@ public:
 
 // The message queue for the consumer(client), forwarder.
 // We limit the size in seconds, drop old messages(the whole gop) if full.
+/*
+ * 流媒体数据缓冲类
+ */
 class SrsMessageQueue
 {
 private:
@@ -165,6 +168,9 @@ public:
 };
 
 // The consumer for SrsLiveSource, that is a play client.
+/*
+ * SrsLiveSource 的消费者，也就是一个播放流的连接客户端
+ */
 class SrsLiveConsumer : public ISrsWakable
 {
 private:
@@ -306,6 +312,9 @@ public:
 // The hub for origin is a collection of utilities for origin only,
 // For example, DVR, HLS, Forward and Transcode are only available for origin,
 // they are meanless for edge server.
+/*
+ * 流源集合
+ */
 class SrsOriginHub : public ISrsReloadHandler
 {
 private:
@@ -481,6 +490,9 @@ public:
 };
 
 // The live streaming source.
+/*
+ * 直播流媒体源
+ */
 class SrsLiveSource : public ISrsReloadHandler
 {
     friend class SrsOriginHub;

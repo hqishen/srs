@@ -19,6 +19,9 @@ class SrsConfDirective;
 class SrsPithyPrint;
 
 // Ingester ffmpeg object.
+/***************************
+ * ffmpeg 获取器
+ */
 class SrsIngesterFFMPEG
 {
 private:
@@ -49,6 +52,11 @@ public:
 // Ingest file/stream/device,
 // encode with FFMPEG(optional),
 // push to SRS(or any RTMP server) over RTMP.
+/*******************
+ * 从文件、流、设备中获取流，
+ * 用FFMPEG进行编码，
+ * 基于RTMP协议推流到SRS或者其他RTMP服务器
+ ******************/
 class SrsIngester : public ISrsCoroutineHandler, public ISrsReloadHandler
 {
 private:

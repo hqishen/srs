@@ -245,6 +245,9 @@ public:
 //
 // Create first object by constructor and create(),
 // use copy if need reference count message.
+/*
+ * 流媒体消息共享指针
+ */
 class SrsSharedPtrMessage
 {
 // 4.1. Message Header
@@ -332,7 +335,10 @@ public:
     virtual SrsSharedPtrMessage* copy2();
 };
 
-// Transmux RTMP packets to FLV stream.
+// Transmux RTMP packets to FLV stream
+/*
+ * flv 文件复合器.
+ */
 class SrsFlvTransmuxer
 {
 private:

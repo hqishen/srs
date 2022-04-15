@@ -19,6 +19,9 @@ class SrsPithyPrint;
 class SrsProcess;
 
 // A transcode engine: ffmepg, used to transcode a stream to another.
+/*
+ * ffmpeg 进程封装
+ */
 class SrsFFMPEG
 {
 private:

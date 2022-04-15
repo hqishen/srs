@@ -39,6 +39,9 @@ class SrsCommonMessage;
 class SrsPacket;
 
 // The simple rtmp client for SRS.
+/*
+ * rtmp 协议客户端
+ */
 class SrsSimpleRtmpClient : public SrsBasicRtmpClient
 {
 public:
@@ -49,6 +52,9 @@ protected:
 };
 
 // Some information of client.
+/*
+ * rtmp 客户端信息
+ */
 class SrsClientInfo
 {
 public:
@@ -66,6 +72,9 @@ public:
 };
 
 // The client provides the main logic control for RTMP clients.
+/*
+ * Rtmp 连接器
+ */
 class SrsRtmpConn : public ISrsStartableConneciton, public ISrsReloadHandler
     , public ISrsCoroutineHandler, public ISrsExpire
 {

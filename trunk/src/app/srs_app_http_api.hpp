@@ -217,6 +217,9 @@ public:
 #endif
 
 // Handle the HTTP API request.
+/*
+ * http api 连接器
+ */
 class SrsHttpApi : public ISrsStartableConneciton, public ISrsHttpConnOwner
     , public ISrsReloadHandler
 {
